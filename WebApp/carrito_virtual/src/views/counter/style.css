@@ -1,7 +1,12 @@
 
+body{
+background-color: #e5e5e5;
+
+}
 
 .centered_body{
-	margin: 0 auto;
+	margin-right: 0 auto;
+	margin-left: 0 auto;
 	text-align: center;
 }
 
@@ -11,8 +16,6 @@
 
 .center_tittle{
 	font-size: 25pt;
-	margin-bottom: 6%;
-	margin-top: 6%;
 }
 
 .center-colum{

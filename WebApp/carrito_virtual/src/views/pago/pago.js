@@ -1,4 +1,7 @@
 import React from 'react';
+import Navbar from '../../components/navbar';
+import {routes, routes_singleton} from '../../constants/routes';
+import {navRoutes} from '../../constants/userNavbar';
 import './style.css';
 
 
@@ -14,7 +17,10 @@ class Pago extends React.Component {
 
 	render(){
 		return(
-			<h1 className="center_tittle">Carrito de compra</h1>
+			<div className="centered_body">
+				<h1>Carrito de compra</h1>
+				<Navbar selected={1} items={navRoutes}/>
+			</div>
 		);
 		
 	}
