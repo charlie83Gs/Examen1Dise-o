@@ -1,4 +1,5 @@
 import React from 'react';
+import './product_style.css'
 
 class Product extends React.Component {
 	constructor(props) {
@@ -6,30 +7,27 @@ class Product extends React.Component {
 	super(props);
     
 	this.state = {
-      name: "",
-	  price: "",
-	  amount: "",
+      name: this.props.name,
+	  price: this.props.price,
+	  amount: this.props.amount,
     };
-	
+	}
 	
 	
 	render(){
-		<div className = {style.product_body}>
-			<h1></h1>
-			<p></p>
-			<p></p>
-		</div>
+		return(
+		<button className = "product_body">
+			<p className="product_title">{this.state.name}</p>
+			<p>precio: {this.state.price}</p>
+			<p>cantidad: {this.state.amount}</p>
+		</button>
+		);
 	}
 	
 	
+
+
 	}
 	
-	
-	const style = {
-		product_body : {
-			text-align: "center";
-			margin: "0 auto";
-		}
-		
-		
-	}
+export default Product;
+

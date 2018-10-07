@@ -9,7 +9,7 @@ class Navbar extends React.Component {
     super(props);
 
     let navBarItems = Object.keys(this.props.items);
-    let itemWidth = (90/navBarItems.length) + "%";
+    let itemWidth = (95/navBarItems.length) + "%";
     let selectedValue = 0;
     if(this.props.selected){
     	selectedValue = this.props.selected
