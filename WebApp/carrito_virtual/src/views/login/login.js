@@ -18,9 +18,9 @@ class Login extends React.Component {
 	
 	login(){
 		//user autentication to login with stat name and password
-		routes_singleton.getInstance().setState(routes.COUNTER);
+		//routes_singleton.getInstance().setState(routes.COUNTER);
 		//console.log(routes_singleton.getInstance());
-		//routes_singleton.getInstances().setState(routes.ADMIN_MENU);
+		routes_singleton.getInstance().setState(routes.ADMIN_MENU);
 	}
 	
 	register(){

@@ -18,8 +18,8 @@ class Product extends React.Component {
 		return(
 		<button className = "product_body">
 			<p className="product_title">{this.state.name}</p>
-			<p>precio: {this.state.price}</p>
-			<p>cantidad: {this.state.amount}</p>
+			<p>Precio: ₡ {this.state.price}</p>
+			<p>Disponible: {this.state.amount}</p>
 		</button>
 		);
 	}

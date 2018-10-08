@@ -72,7 +72,10 @@ export default NavBarItem;
 			"backgroundColor": "#af9582",
 			"textAlign": "center",
 			"fontSize": "20pt",
-			"padding": "5px"
+			"padding": "10px",
+			"paddingTop": "15px",
+			"paddingBottom": "15px",
+			"borderRadius":"5px"
 
 		},
 
@@ -80,7 +83,8 @@ export default NavBarItem;
 			"backgroundColor": "#d3c7be",
 			"textAlign": "center",
 			"fontSize": "20pt",
-			"padding": "5px"
+			"padding": "10px",
+			"borderRadius":"5px"
 		}
 		
 		

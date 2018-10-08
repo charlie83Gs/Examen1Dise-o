@@ -25,24 +25,40 @@ class Counter extends React.Component {
 			<div className="centered_body">
 				<h1>Productos disponibles</h1>
 				<Navbar items={navRoutes}/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
-				<Product name="Pan de Canela" price="200" amount="20"/>
+				<div className="products-div">
+					<div>
+					<label className="secondary_tittle">Disponibles</label>
+					<input className="search_box" type="search" placeholder="Buscar producto"></input><br/>
+					</div>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					<Product name="Pan de Canela" price="200" amount="20"/>
+					</div>
+				<div className="options-div">
+				<h2>Opciones</h2>
+				<p>Opcion #</p>
+				<p>Opcion #</p>
+				<p>Opcion #</p>
+				<p>Opcion #</p>
+				<p>Opcion #</p>
+				<p>Opcion #</p>
+				</div>
+
 			</div>
 		);
 		

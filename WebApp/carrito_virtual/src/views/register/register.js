@@ -43,7 +43,7 @@ class Register extends React.Component {
 						<p>Contraseña</p>
 						<input className="center-colum" value={this.state.pass} 
 						onChange={(event) => this.handleChange("password",event)} type="password" /><br/>
-						<button onClick={this.login} className="center_normal_button positive_button">Resgitrar</button>
+						<button onClick={this.login} className="center_normal_button positive_button">Resgistrar</button>
 						<button onClick={this.login} className="center_normal_button negative_button">Cancelar</button>
 					</form>
 			</div>

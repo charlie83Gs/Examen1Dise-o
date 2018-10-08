@@ -1,10 +1,11 @@
-import Login from "../views/login/login"
-import AdminMenu from "../views/adminMenu/adminMenu"
-import Counter from "../views/counter/counter"
-import Cashier from "../views/cashier/cashier"
-import InsertProduct from "../views/insertProduct/insertProduct"
-import Pago from "../views/pago/pago"
-import Register from "../views/register/register"
+import Login from "../views/login/login";
+import AdminMenu from "../views/adminMenu/adminMenu";
+import Counter from "../views/counter/counter";
+import Cashier from "../views/cashier/cashier";
+import InsertProduct from "../views/insertProduct/insertProduct";
+import Pago from "../views/pago/pago";
+import Register from "../views/register/register";
+import AdminUser from "../views/adminUser/adminUser";
 
 
 export const routes = {
@@ -15,7 +16,8 @@ export const routes = {
 	LOGIN: Login,
 	INSERT_PRODUCT: InsertProduct,
 	PAGO: Pago,
-	REGISTER: Register,
+  REGISTER: Register,
+	AMDIN_USER: AdminUser,
 
 };
 
