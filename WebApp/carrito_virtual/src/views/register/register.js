@@ -1,17 +1,20 @@
 import React from 'react';
 import './style.css';
 import {routes, routes_singleton} from '../../constants/routes';
+import {auth_register} from "../../controller/authentication_controller"
 
 class Register extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-    	usuario: "",
-    	pass: "",
-    	correo: ""
+    	username: "",
+    	password: "",
+    	email: "",
+    	errorMessage: ""
     };
-	
+	this.cancel = this.cancel.bind(this);
+	this.register = this.register.bind(this);
 
 	}
 		//{(event) => this.handleChange("username",event)}
@@ -22,7 +25,10 @@ class Register extends React.Component {
 	}
 
 	register(){
-		routes_singleton.getInstance().setState(routes.COUNTER);
+
+		auth_register(this.state.username,this.state.email,this.state.password);
+	    //console.log("trying to register :" + this.state.username);
+		//routes_singleton.getInstance().setState(routes.COUNTER);
 	}
 
 	cancel(){
@@ -33,19 +39,18 @@ class Register extends React.Component {
 		return(
 			<div className="centered_body">
 			<h1 className="center_tittle">Registrarse en el carrito virtual</h1>
-				<form onSubmit={this.login}>
+						{this.state.errorMessage != '' &&  <p>{this.state.errorMessage}</p> }
 						<p>Nombre de usuario</p>
-						<input className="center-colum" value={this.state.usuario} 
-						onChange={(event) => this.handleChange("usuario",event)} type="text" /><br/>
+						<input className="center-colum" value={this.state.username} 
+						onChange={(event) => this.handleChange("username",event)} type="text" /><br/>
 						<p>Correo</p>
-						<input className="center-colum" value={this.state.correo} 
-						onChange={(event) => this.handleChange("correo",event)}type="text" /><br/>
+						<input className="center-colum" value={this.state.email} 
+						onChange={(event) => this.handleChange("email",event)} type="email" /><br/>
 						<p>Contraseña</p>
-						<input className="center-colum" value={this.state.pass} 
+						<input className="center-colum" value={this.state.password} 
 						onChange={(event) => this.handleChange("password",event)} type="password" /><br/>
-						<button onClick={this.login} className="center_normal_button positive_button">Resgistrar</button>
-						<button onClick={this.login} className="center_normal_button negative_button">Cancelar</button>
-					</form>
+						<button onClick={this.register} className="center_normal_button positive_button">Registrar</button>
+						<button onClick={this.cancel} className="center_normal_button negative_button">Cancelar</button>
 			</div>
 		);
 		

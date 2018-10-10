@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import {routes, routes_singleton} from '../../constants/routes';
+import {auth_login} from "../../controller/authentication_controller"
 
 class Login extends React.Component {
 
@@ -9,6 +10,7 @@ class Login extends React.Component {
     this.state = {
       username: '',
       userpass: '',
+      errorMessage: ''
     };
 	
 	this.login = this.login.bind(this);
@@ -18,9 +20,29 @@ class Login extends React.Component {
 	
 	login(){
 		//user autentication to login with stat name and password
+		if(this.state.username == ""){
+			this.setState({errorMessage:"Por favor inserte su usuario!!"})
+		}else if(this.state.userpass == ""){
+			this.setState({errorMessage:"Por favor inserte su contraseña!!"})
+		}else{
+			let actual_component = this;
+			auth_login(this.state.username,this.state.userpass,function(result){
+				if(result.valid){
+					//actual_component.setState({errorMessage:""});
+					if(result.data.isAdmin){
+						routes_singleton.getInstance().setState(routes.ADMIN_MENU);
+					}else{
+						routes_singleton.getInstance().setState(routes.COUNTER);
+					}
+				}else{
+					actual_component.setState({errorMessage:"Usuario o contraseña invalidos, por favor intentelo de nuevo"});
+				}
+			});
+		}
+		
 		//routes_singleton.getInstance().setState(routes.COUNTER);
 		//console.log(routes_singleton.getInstance());
-		routes_singleton.getInstance().setState(routes.ADMIN_MENU);
+		//routes_singleton.getInstance().setState(routes.ADMIN_MENU);
 	}
 	
 	register(){
@@ -45,6 +67,7 @@ class Login extends React.Component {
 		return(
 			<div className="centered_body simlpe_bg" >
 				<h1 className="center_tittle">Bienvenido al carrito virtual</h1>
+				{this.state.errorMessage != '' &&  <p>{this.state.errorMessage}</p> }
 				<div>		
 						<p>Usuario</p>
 						<input className="center-colum" value={this.state.username} 

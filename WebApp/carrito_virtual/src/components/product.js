@@ -10,6 +10,7 @@ class Product extends React.Component {
       name: this.props.name,
 	  price: this.props.price,
 	  amount: this.props.amount,
+	  product:this.props.product
     };
 	}
 	
